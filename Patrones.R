@@ -65,3 +65,53 @@ for(i in 1:500) {
   turtle_forward(i)
   turtle_right(75)
 }
+
+#####PATRÓN DE MOIRÉ#######
+frente <- 2
+ángulo <- 1
+
+turtle_do(for(j in 1:46) {
+  turtle_setpos(1, 1)
+  turtle_forward(frente)
+  turtle_setangle(ángulo)
+  frente = frente + 3
+  ángulo = ángulo + 1
+  if(frente > 138) {
+    frente <- 2
+    ángulo <- 90
+    turtle_setpos(1, 1)
+    turtle_setangle(90)
+  }
+})
+
+turtle_do(for(k in 1:47) {
+  turtle_setpos(1, 1)
+  turtle_forward(frente)
+  turtle_setangle(ángulo)
+  frente = frente + 3
+  ángulo = ángulo - 1
+})#####PATRÓN DE MOIRÉ#######
+frente <- 2
+ángulo <- 1
+
+turtle_do(for(j in 1:46) {
+  turtle_setpos(1, 1)
+  turtle_forward(frente)
+  turtle_setangle(ángulo)
+  frente = frente + 3
+  ángulo = ángulo + 1
+  if(frente > 138) {
+    frente <- 2
+    ángulo <- 90
+    turtle_setpos(1, 1)
+    turtle_setangle(90)
+  }
+})
+
+turtle_do(for(k in 1:47) {
+  turtle_setpos(1, 1)
+  turtle_forward(frente)
+  turtle_setangle(ángulo)
+  frente = frente + 3
+  ángulo = ángulo - 1
+})
