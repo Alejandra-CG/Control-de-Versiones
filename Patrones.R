@@ -66,6 +66,33 @@ for(i in 1:500) {
   turtle_right(75)
 }
 
+### M O I R E ### Lorena Miranda
+
+lineas.paralelas <- function(num_lineas, linea_largo, distancia_entre_lineas, angulo) {
+  for (i in 1:num_lineas) {
+    turtle_forward(linea_largo)
+    
+    turtle_up()
+    turtle_backward(linea_largo)
+    turtle_right(angulo)
+    turtle_forward(distancia_entre_lineas)
+    turtle_left(angulo)
+    turtle_down()
+  }
+}
+
+turtle_init(mode = "clip")
+turtle_do({
+  turtle_setpos(x = 1, y = 1)
+  turtle_col("black")
+  turtle_lwd(7)
+  lineas.paralelas(250, 200, 2, 90)
+  turtle_setpos(x = 1, y = 1)
+  turtle_setangle(355)
+  turtle_lwd(5)
+  lineas.paralelas(500, 200, 2, 120)
+})
+
 #####PATRÓN DE MOIRÉ#######
 frente <- 2
 ángulo <- 1
@@ -115,3 +142,4 @@ turtle_do(for(k in 1:47) {
   frente = frente + 3
   ángulo = ángulo - 1
 })
+
