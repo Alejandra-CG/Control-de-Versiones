@@ -38,3 +38,30 @@ turtle_do({
   turtle_param(col="orange", lwd=3)
   espiral(300)
 })
+
+
+#Eduardo Arturo Aguilar Herrera
+#Estadistica General en R
+
+
+###patrón espiral###
+
+install.packages("turtleGraphics")
+library(TurtleGraphics)
+
+
+turtle_init()
+for(i in 1:360) {
+  turtle_forward(i)
+  turtle_right(45)
+}
+
+
+###patrón de Moire###
+
+turtle_init()
+
+for(i in 1:500) {
+  turtle_forward(i)
+  turtle_right(75)
+}
